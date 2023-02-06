@@ -26,6 +26,10 @@ Instalação da boblioteca uvicorn:
 ```
 pip install uvicorn[standard]
 ```
+Instalação das bibliotecas por requirements:
+```
+pip install -r requirements.txt
+```
 Rodar o projeto no localhost: 
 ```
 uvicorn main:app --reload
