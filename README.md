@@ -16,8 +16,8 @@ A API tem o objetivo de fornecer respostas de perguntas relacionadas a empresa. 
 
 ### Uvicorn:
 > Uvicorn é um servidor de aplicativos web de alta performance baseado em asyncio, escrito em Python. Ele é projetado especificamente para trabalhar com aplicativos web construídos com a biblioteca FastAPI, mas também é compatível com outras bibliotecas baseadas em asyncio, como Starlette.
-Uvicorn é fácil de usar e oferece recursos avançados, como suporte para o protocolo HTTP/2, gerenciamento de subprocessos e carregamento de configurações a partir de arquivos. Além disso, ele é altamente escalável e pode lidar com muitas requisições ao mesmo tempo, tornando-o uma opção popular para aplicativos web de alta performance.
-Em resumo, Uvicorn é uma ótima escolha para executar aplicativos web construídos com bibliotecas asyncio no Python, oferecendo alta performance, escalabilidade e recursos avançados.
+> Uvicorn é fácil de usar e oferece recursos avançados, como suporte para o protocolo HTTP/2, gerenciamento de subprocessos e carregamento de configurações a partir de arquivos. Além disso, ele é altamente escalável e pode lidar com muitas requisições ao mesmo tempo, tornando-o uma opção popular para aplicativos web de alta performance.
+> Em resumo, Uvicorn é uma ótima escolha para executar aplicativos web construídos com bibliotecas asyncio no Python, oferecendo alta performance, escalabilidade e recursos avançados.
 
 ***
 
