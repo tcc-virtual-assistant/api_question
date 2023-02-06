@@ -18,5 +18,5 @@ def read_item(item_id: int, b: bool, s: Optional[str] = None):
     return {'item_id' : item_id, 'string' : s, 'booleano' : b}
 
 @app.post('/item')
-def add_item(novo_item: Item):
-    return novo_item
+def add_item(novo_item: Item, outro_item: Item):
+    return novo_item, outro_item
