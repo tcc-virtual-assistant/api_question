@@ -1,19 +1,18 @@
 from fastapi import APIRouter
 
-from models.papel import Papel
+from models.answer import Answer
 
 router = APIRouter()
 
-banco_de_dados = []
 
 @router.post('/')
-def add_item(item: Papel):
-    banco_de_dados.append(item)
-    return item
+async def add_answer(answer: Answer):
+    await answer.save()
+    return answer
 
 @router.get('/')
-def list_item():
-    return banco_de_dados
+async def list_answer():
+    return await Answer.objects.all()
 
 # @app.get('/item/valor_total')
 # def get_valor_total():

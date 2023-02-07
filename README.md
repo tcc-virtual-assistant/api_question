@@ -30,6 +30,10 @@ Instalação das bibliotecas por requirements:
 ```
 pip install -r requirements.txt
 ```
+Instalação da bibliteca para banco de dados:
+```
+pip install ormar[sqlite]
+```
 Rodar o projeto no localhost: 
 ```
 uvicorn main:app --reload

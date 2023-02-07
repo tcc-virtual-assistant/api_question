@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from controllers import papeis_controllers as papeis
+from controllers import answer_controllers as answer
 
 router = APIRouter()
 
-router.include_router(papeis.router, prefix = '/papeis')
+router.include_router(answer.router, prefix = '/answer')
