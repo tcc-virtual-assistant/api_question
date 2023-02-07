@@ -6,26 +6,27 @@ class Item(BaseModel):
     id: int
     descricao: str
     valor: float
+    quantidade: int
 
 app = FastAPI()
 
-@app.get('/')
-def read_root(user: Optional[str] = Header('indefinido')):
-    return {'user' : user}
-
-@app.get('/cookie')
-def cookie(response: Response):
-    response.set_cookie(key='mycookie', value='Ola Mundo')
-    return {'cookie': True}
-
-@app.get('/get-cookie')
-def get_cookie(mycookie: Optional[str] = Cookie(None)):
-    return {'Cookie' : mycookie}
-
-@app.get('/items/{item_id}')
-def read_item(item_id: int, b: bool, s: Optional[str] = None):
-    return {'item_id' : item_id, 'string' : s, 'booleano' : b}
+banco_de_dados = []
 
 @app.post('/item')
-def add_item(novo_item: Item, outro_item: Item):
-    return novo_item, outro_item
+def add_item(item: Item):
+    banco_de_dados.append(item)
+    return item
+
+@app.get('/item')
+def list_item():
+    return banco_de_dados
+
+@app.get('/item/valor_total')
+def get_valor_total():
+    # total = sum([item.valor * item.quantidade for item in banco_de_dados])
+
+    total = 0.0
+    for item in banco_de_dados:
+        total = item.valor * item.quantidade
+
+    return {'valor_total': total}
