@@ -17,6 +17,11 @@ A API tem o objetivo de fornecer respostas de perguntas relacionadas a empresa. 
 > Uvicorn é fácil de usar e oferece recursos avançados, como suporte para o protocolo HTTP/2, gerenciamento de subprocessos e carregamento de configurações a partir de arquivos. Além disso, ele é altamente escalável e pode lidar com muitas requisições ao mesmo tempo, tornando-o uma opção popular para aplicativos web de alta performance.
 > Em resumo, Uvicorn é uma ótima escolha para executar aplicativos web construídos com bibliotecas asyncio no Python, oferecendo alta performance, escalabilidade e recursos avançados.
 
+### Ormar:
+> Ormar é uma biblioteca de banco de dados ORM (Object-Relational Mapping) para Python. Ele permite o acesso e manipulação de dados em bancos de dados relacionais, como MySQL, PostgreSQL e SQLite, usando o Python como linguagem de programação.
+> Com Ormar, é possível definir modelos de dados em Python que correspondem a tabelas no banco de dados, e então usar esses modelos para realizar operações CRUD (Create, Read, Update, Delete). Isso significa que não é preciso escrever código SQL manualmente, e sim trabalhar com objetos Python para manipular dados.
+> Ormar é fácil de usar e oferece recursos avançados, como suporte a transações, consultas avançadas e relacionamentos entre tabelas.
+
 ## Comandos:
 Instalação da boblioteca fastAPI:
 ```
