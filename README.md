@@ -22,6 +22,11 @@ A API tem o objetivo de fornecer respostas de perguntas relacionadas a empresa. 
 > Com Ormar, é possível definir modelos de dados em Python que correspondem a tabelas no banco de dados, e então usar esses modelos para realizar operações CRUD (Create, Read, Update, Delete). Isso significa que não é preciso escrever código SQL manualmente, e sim trabalhar com objetos Python para manipular dados.
 > Ormar é fácil de usar e oferece recursos avançados, como suporte a transações, consultas avançadas e relacionamentos entre tabelas.
 
+### PyTest:
+> Pytest é uma biblioteca de teste de unidade para Python. Ele permite escrever testes de unidade de maneira eficiente e organizada, e oferece uma série de recursos avançados para testar aplicativos Python.
+> Com Pytest, é possível escrever testes de unidade como funções normais, e ele fornece uma sintaxe simples e intuitiva para chamar essas funções e verificar seus resultados. Além disso, ele oferece recursos avançados como fixtures, marcadores de teste e hooks que permitem personalizar as estratégias de testes.
+> Além disso, Pytest é altamente escalável e pode lidar com grandes quantidades de testes, o que o torna uma ótima opção para aplicativos de médio a grande porte. Ele também é compatível com uma ampla gama de bibliotecas e frameworks Python, como Django, Flask e Pygame.
+
 ## Comandos:
 Instalação da boblioteca fastAPI:
 ```
@@ -31,13 +36,13 @@ Instalação da boblioteca uvicorn:
 ```
 pip install uvicorn[standard]
 ```
-Instalação das bibliotecas por requirements:
-```
-pip install -r requirements.txt
-```
 Instalação da bibliteca para banco de dados:
 ```
 pip install ormar[sqlite]
+```
+Instalação das bibliotecas por requirements:
+```
+pip install -r requirements.txt
 ```
 Rodar o projeto no localhost: 
 ```
