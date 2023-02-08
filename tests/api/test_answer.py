@@ -35,3 +35,21 @@ def test_obtem_papel_inexistente_por_id(client: TestClient) -> None:
 
     assert response.status_code == 404
     assert content['mensagem'] == 'Entidade não encontrada'
+
+def  test_update_answer_existente(client: TestClient) -> None:
+    atributos = create_answer_valido()
+    answer = Answer(**atributos)
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(answer.save())
+
+    nova_categoria = 'nova categoria'
+    atributos_para_atualizar = {'categoria': nova_categoria}
+
+    response = client.patch(f'/answer/{answer.id}', json = atributos_para_atualizar)
+    content = response.json()
+
+    answer_atualizado = loop.run_until_complete(Answer.objects.get(id = answer.id))
+
+    assert response.status_code == 200
+    assert content['categoria'] == nova_categoria
+    assert answer_atualizado.categoria == nova_categoria
