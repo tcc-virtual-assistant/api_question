@@ -44,6 +44,14 @@ Instalação da bibliteca para banco de dados:
 ```
 pip install ormar[sqlite]
 ```
+Instalação da bibliteca de testes:
+```
+pip install pytest
+```
+Instalação da bibliteca para teste assíncronos:
+```
+pip install pytest-asyncio
+```
 Instalação das bibliotecas por requirements:
 ```
 pip install -r requirements.txt
