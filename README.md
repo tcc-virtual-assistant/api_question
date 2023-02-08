@@ -27,6 +27,10 @@ A API tem o objetivo de fornecer respostas de perguntas relacionadas a empresa. 
 > Com Pytest, é possível escrever testes de unidade como funções normais, e ele fornece uma sintaxe simples e intuitiva para chamar essas funções e verificar seus resultados. Além disso, ele oferece recursos avançados como fixtures, marcadores de teste e hooks que permitem personalizar as estratégias de testes.
 > Além disso, Pytest é altamente escalável e pode lidar com grandes quantidades de testes, o que o torna uma ótima opção para aplicativos de médio a grande porte. Ele também é compatível com uma ampla gama de bibliotecas e frameworks Python, como Django, Flask e Pygame.
 
+### Pytest-asyncio:
+> A biblioteca Pytest-asyncio é uma extensão para o Pytest que permite testar aplicativos assíncronos escritos com o módulo asyncio do Python. Ela fornece recursos adicionais para lidar com coroutines assíncronas e torna mais fácil escrever testes para aplicativos assíncronos.
+> Com Pytest-asyncio, é possível escrever testes de unidade para coroutines assíncronos da mesma forma que escreveria testes para funções normais. Além disso, ele fornece uma série de fixtures que permitem testar coroutines assíncronas de maneira eficiente e organizada.
+
 ## Comandos:
 Instalação da boblioteca fastAPI:
 ```
