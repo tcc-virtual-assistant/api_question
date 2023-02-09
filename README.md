@@ -49,6 +49,10 @@ Quantos colaboradores da Bosch existem no Brasil| curiosidade bosch | 10
 O que a Bosch faz | curiosidade bosch | 11
 
 ## Comandos:
+
+<details>
+<summary>Instalação das bibliotecas separadamente</summary>
+
 Instalação da boblioteca fastAPI:
 ```
 pip install fastapi
@@ -69,6 +73,12 @@ Instalação da bibliteca para teste assíncronos:
 ```
 pip install pytest-asyncio
 ```
+
+***
+</details>
+
+<br>
+
 Instalação das bibliotecas por requirements:
 ```
 pip install -r requirements.txt
@@ -76,4 +86,31 @@ pip install -r requirements.txt
 Rodar o projeto no localhost: 
 ```
 uvicorn main:app --reload
+```
+
+## End-points:
+
+Documentação:
+```
+http://localhost:8000/docs#/
+```
+Listar todas as respostas:
+```
+http://localhost:8000/answer/
+```
+Adicionar resposta:
+```
+http://localhost:8000/answer/
+```
+Pegar uma resposta específica:
+```
+http://localhost:8000/answer/{pergunta_id}
+```
+Deletar uma resposta específica:
+```
+http://localhost:8000/answer/{pergunta_id}
+```
+Mudar um parâmetro de uma resposta específica:
+```
+http://localhost:8000/answer/{pergunta_id}
 ```
