@@ -5,14 +5,14 @@ def create_answer_valido():
         'categoria' : 'string'
     }
 
-def create_answer_invalido(campos = ['sigla']):
+def create_answer_invalido(campos = ['categoria']):
     answer_invalido = {
         'id' : 0,
         'response' : 'string',
         'categoria' : 'string'
     }
 
-    if 'sigla' in campos_invalidos:
-        answer_invalido['sigla'] = 'AAAAAAAA'
+    if 'categoria' in answer_invalido:
+        answer_invalido['categoria'] = 'AAAAAAAA'
 
     return answer_invalido
