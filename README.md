@@ -31,6 +31,23 @@ A API tem o objetivo de fornecer respostas de perguntas relacionadas a empresa. 
 > A biblioteca Pytest-asyncio é uma extensão para o Pytest que permite testar aplicativos assíncronos escritos com o módulo asyncio do Python. Ela fornece recursos adicionais para lidar com coroutines assíncronas e torna mais fácil escrever testes para aplicativos assíncronos.
 > Com Pytest-asyncio, é possível escrever testes de unidade para coroutines assíncronos da mesma forma que escreveria testes para funções normais. Além disso, ele fornece uma série de fixtures que permitem testar coroutines assíncronas de maneira eficiente e organizada.
 
+## Mapeamento de perguntas e respostas:
+Para que o usuário da API possa se mapear e saiba em qual ID se encontra a resposta para cada pergunta já estipulada, foi realizado um mapeamento que informando ao usuário sobre a sua determinada localização:
+
+Pergunta | Categoria | ID da resposta
+:-----: | :-----: |:-----:
+Quem é o presidente da planta/Bosch América Latina | colaborador | 1
+Quem é o presidente/CEO da Bosch | colaborador | 2
+Quem foi Robert Bosch | historia | 3
+Qual é a história da Bosch | historia | 4
+Onde devolvo o cracha provisório | local | 5
+O que é VsDia | ferramenta de trabalho | 6
+A quantos anos a Bosch está no Brasil | historia | 7
+O que significa ETS | setor | 8
+Quantas Bosch existem no mundo | curiosidade bosch | 9
+Quantos colaboradores da Bosch existem no Brasil| curiosidade bosch | 10
+O que a Bosch faz | curiosidade bosch | 11
+
 ## Comandos:
 Instalação da boblioteca fastAPI:
 ```
