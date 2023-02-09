@@ -1,4 +1,6 @@
 import asyncio
+import pytest
+import ormar
 
 from fastapi.testclient import TestClient
 from models.answer import Answer
@@ -59,6 +61,26 @@ def  test_update_answer_inexistente(client: TestClient) -> None:
     atributos_para_atualizar = {'categoria' : nova_categoria}
 
     response = client.patch(f'/answer/1', json = atributos_para_atualizar)
+    content = response.json()
+
+    assert response.status_code == 404
+    assert content['mensagem'] == 'Entidade não encontrada'
+
+def test_delete_answer_existente(client: TestClient) -> None:
+    atributos = create_answer_invalido()
+    answer = Answer(**atributos)
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(answer.save())
+
+    response = client.delete(f'/answer/{answer.id}')
+
+    with pytest.raises(ormar.exceptions.NoMatch):
+        loop.run_until_complete(Answer.objects.get(id = answer.id))
+    
+    assert response.status_code == 200
+
+def test_delete_answer_inexistente(client: TestClient) -> None:
+    response = client.delete(f'/answer/1')
     content = response.json()
 
     assert response.status_code == 404

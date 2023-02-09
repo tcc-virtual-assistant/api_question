@@ -36,6 +36,17 @@ async def path_answer(propriedades_atualizacao: AnswerUpdate, answer_id: int, re
         response.status_code = 404
         return {'mensagem' : 'Entidade não encontrada'}
 
+@router.delete('/{answer_id}')
+async def delete_answer(answer_id: int, response: Response):
+    try:
+        answer = await Answer.objects.get(id = answer_id)
+        return await answer.delete()
+    except:
+        response.status_code = 404
+        return {'mensagem' : 'Entidade não encontrada'}
+
+
+
 # @app.get('/item/valor_total')
 # def get_valor_total():
 #     # total = sum([item.valor * item.quantidade for item in banco_de_dados])
