@@ -53,3 +53,13 @@ def  test_update_answer_existente(client: TestClient) -> None:
     assert response.status_code == 200
     assert content['categoria'] == nova_categoria
     assert answer_atualizado.categoria == nova_categoria
+
+def  test_update_answer_inexistente(client: TestClient) -> None:
+    nova_categoria = 'Nova categoria'
+    atributos_para_atualizar = {'categoria' : nova_categoria}
+
+    response = client.patch(f'/answer/1', json = atributos_para_atualizar)
+    content = response.json()
+
+    assert response.status_code == 404
+    assert content['mensagem'] == 'Entidade não encontrada'

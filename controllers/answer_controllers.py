@@ -2,6 +2,7 @@ from fastapi import APIRouter, Response
 import ormar
 
 from models.answer import Answer
+from models.requests.answer_update import AnswerUpdate
 
 router = APIRouter()
 
@@ -20,6 +21,17 @@ async def get_answer(answer_id: int, response: Response):
     try:
         answer = await Answer.objects.get(id = answer_id)
         return answer
+    except ormar.exceptions.NoMatch:
+        response.status_code = 404
+        return {'mensagem' : 'Entidade não encontrada'}
+
+@router.patch('/{answer_id}')
+async def path_answer(propriedades_atualizacao: AnswerUpdate, answer_id: int, response: Response):
+    try:
+        answer_salvo = await Answer.objects.get(id = answer_id)
+        propriedades_atualizadas = propriedades_atualizacao.dict(exclude_unset=True)
+        await answer_salvo.update(**propriedades_atualizadas)
+        return answer_salvo
     except ormar.exceptions.NoMatch:
         response.status_code = 404
         return {'mensagem' : 'Entidade não encontrada'}
