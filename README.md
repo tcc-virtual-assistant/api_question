@@ -47,6 +47,8 @@ O que significa ETS | setor | 8
 Quantas Bosch existem no mundo | curiosidade bosch | 9
 Quantos colaboradores da Bosch existem no Brasil| curiosidade bosch | 10
 O que a Bosch faz | curiosidade bosch | 11
+Quem são os instrutores da ETS | colaborador | 12
+Qual é o seu objetivo como assistente virtual | projeto | 13
 
 ## Comandos:
 
