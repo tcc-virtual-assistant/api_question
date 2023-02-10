@@ -104,13 +104,13 @@ http://localhost:8000/answer/
 ```
 Pegar uma resposta específica:
 ```
-http://localhost:8000/answer/{pergunta_id}
+http://localhost:8000/answer/{resposta_id}
 ```
 Deletar uma resposta específica:
 ```
-http://localhost:8000/answer/{pergunta_id}
+http://localhost:8000/answer/{resposta_id}
 ```
 Mudar um parâmetro de uma resposta específica:
 ```
-http://localhost:8000/answer/{pergunta_id}
+http://localhost:8000/answer/{resposta_id}
 ```
