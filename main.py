@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
+
 from rotas import router
 
 app = FastAPI()
